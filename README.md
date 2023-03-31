@@ -15,4 +15,4 @@ An online marketplace for seeds (rice), fertilizers, with a few clicks, can help
 
 **Features/How it works:** <br>
 It enables people to register an account and easily enter specific data related to rice production. The user has the option to pick the seeds, fertilizers, goods, or machinery they wish to provide to farmers. The method of payment will be online. <br>
-[Project Proposal Link] (https://docs.google.com/document/d/1qrSGb18818rieMkkhQcuHw5hXLTiDLUqvPczthYM8bM/edit)
+[Proposal link](https://docs.google.com/document/d/1qrSGb18818rieMkkhQcuHw5hXLTiDLUqvPczthYM8bM/edit)
