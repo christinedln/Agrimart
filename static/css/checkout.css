@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/ricebg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  overflow-y: auto; 
+}
+
+  .header{
+    height: 80px;
+    width: 100%;
+    background-image: url("../images/logo2.png");
+    border-radius: 3px;
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .header.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+  
+  }
+
+form button[type="submit"] {
+  
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: #4F7942;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+
+}
+
+form button[type="submit"]:hover{
+  background-color: black;
+}
+
+.checkout-tab
+{
+
+  font-weight: bold;
+  font-size: large;
+}
+
+
+
+.product-txt {
+  font-weight: bold;
+  font-size: medium;
+  position: fixed;
+  left: 0;
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  grid-row-gap: 10px;
+  max-width: 900px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid goldenrod;
+  background-color: green;
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 200px; 
+  width: 220px;
+  position: relative;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-info {
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  text-align: center;
+  color: black;
+}
+
+.images{
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.container-checkout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right:auto;
+  margin-left:5px;
+}
+
+.sidebar {
+  width: 25%;
+  border-radius: 5px;
+  background-color: #B4C424;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-right: 190px;
+  padding: 15px;
+  text-align: left;
+}
+
+.sidebar h3 {
+  color: black;
+}
+
+.payment-option {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.payment-icon {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+.payment-image {
+  text-align: center;
+}
+
+.payment-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.payment-option label {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+  display: none;
+}
+.payment-option input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.payment-option input[type="radio"]:checked + label:before {
+  background-color: white;
+}
+.payment-option label:hover {
+  background-color: #90A513;
+}
+
+.payment-message {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);;
+  color: black;
+}
+
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0;
+  align-items: start;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 60px;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 0 20px 40px; 
+  overflow: hidden; 
+}
+
+.foot {
+  position: absolute;
+  bottom: 0;
+  left: 20px; 
+  width: calc(100% - 40px); 
+  padding: 10px 0px;
+  border-top: 1px solid black;
+}
+
+
+
+

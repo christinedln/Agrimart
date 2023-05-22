@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../images/ricebg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header{
+  height: 80px;
+  width: 100%;
+  background-image: url("../images/logo2.png");
+  border-radius: 3px;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.header.logo{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.cart{
+  display: flex;
+  background-color: green;
+  justify-content: space-between;
+  align-items: top right;
+  padding: 7px 10px;
+  border-radius: 3px;
+  width: 80px;
+}
+
+.cart p{
+  height: 22px;
+  width: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background-color: black;
+  color: white;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+.sidebar{
+  margin-top:10px;
+  width: 25%;
+  border-radius: 5px;
+  background-color: #B4C424;
+  margin-left: 5px;
+  margin-right:15px;
+  padding: 15px;
+  text-align: center;
+}
+
+.head{
+  background-color:gray;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+
+}
+
+.foot{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: 1px solid black;
+
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  border: 1px solid goldenrod;
+  background-color: green;
+  border-radius: 5px;
+  padding: 15px;
+  margin-right: 70px;
+  height:300px;
+  width:300px;
+}
+
+.box:hover{
+  transform: scale(1.3);
+}
+
+.box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box form input[type="submit"] {
+  margin-top: 10px;
+}
+
+
+.img-box{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.images{
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.bottom{
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
+h2{
+  font-size: 20px;
+  color: red;
+
+}
+
+button{
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: #4F7942;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+
+}
+
+button:hover{
+  background-color: black;
+}
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 10px 10px;
+}
+
+.row-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid goldenrod;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  grid-row-gap: 10px; 
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.product-cart{
+  display: flex;
+  justify-content: center;
+}
+
+.product-image {
+  width: 100px; 
+  height: 100px;
+  margin-right: 10px; 
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.product-details {
+  margin-top:10px;
+}
+.add-to-cart-btn {
+  background-color: #F8A602;
+  border-radius: 60px;
+  height: 35px;
+  width:180px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: gray;
+}

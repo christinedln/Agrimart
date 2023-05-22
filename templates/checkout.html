@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/checkout.css">
+    <title>Agrimart Checkout</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logout">
+        <form method="get" action="{{ url_for('logout') }}">
+            <button type="submit" name="button-logout">Logout</button>
+        </form>
+        </div>
+    </div>
+    <div class="container-checkout">
+        <div class="products">
+            <div class="grid-container">
+                        {% for product in cart %}
+                        <div class="box">
+                          <div class="img-box">
+                            <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+                          </div>
+                          <div class="product-info">
+                            <div class="product-name">{{ product.name }}</div>
+                            <div class="product-price">₱{{ product.price }} x {{ product.quantity }}</div>
+                          </div>
+                        </div>
+                        {% endfor %}
+                    <div class="foot">
+                    <p>Total price: ₱{{ total_price }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h3>Payment Method:</h3>
+        <div class="payment-option">
+            <input type="radio" name="payment" value="gcash" id="payment-gcash">
+            <label for="payment-gcash">
+              <img src="../static/images/gcash.jpg" class="payment-icon">
+              GCash
+            </label>
+          </div>
+            <div class="payment-message" id="gcash-message">
+              <p>Our GCash number is <b>09123456789</b>. You can send your payment here!</p>
+            </div>
+        <div class="payment-option">
+          <input type="radio" name="payment" value="credit_card" id="payment-credit-card">
+          <label for="payment-credit-card">
+            <img src="../static/images/creditcard.png" class="payment-icon">
+            Credit Card
+          </label>
+        </div>
+          <div class="payment-message" id="credit-card-message">
+            <p>Our account number in BDO is <b>001234567898</b>. You can send your payment here!</p>
+            <p>Our account number in BPI is <b>0123456789</b>. You can send your payment here!</p>
+            <p>Our account number in Landbank is <b>0123456789</b>. You can send your payment here!</p>
+          </div>
+        <div class="payment-option">
+          <input type="radio" name="payment" value="maya" id="payment-maya">
+          <label for="payment-maya">
+            <img src="../static/images/maya.jpg" class="payment-icon">
+            Maya
+          </label>
+        </div>
+          <div class="payment-message" id="maya-message">
+            <p>Our paymaya account number is <b>012345678922</b>. You can send your payment here!</p>
+          </div>
+          <br>  
+        <h3>Please input your number or email address and wait for the confirmation of your payment.</h3> <br>
+        <form method="post" action="/checkout">
+          <label for="number">Number:</label>
+          <input type="text" name="number" id="number"><br><br>
+          <label for="email">Email Address:</label>
+          <input type="email" name="email" id="email"><br> <br>
+          <button type="submit">Submit</button>
+        </form>
+    </div>
+        <script>
+            function showPaymentMessage() {
+                var paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+                var gcashMessage = document.getElementById('gcash-message');
+                var creditCardMessage = document.getElementById('credit-card-message');
+                var visaMessage = document.getElementById('maya-message');
+                gcashMessage.style.display = 'none';
+                creditCardMessage.style.display = 'none';
+                visaMessage.style.display = 'none';
+                if (paymentMethod === 'gcash') {
+                    gcashMessage.style.display = 'block';
+                } else if (paymentMethod === 'credit_card') {
+                    creditCardMessage.style.display = 'block';
+                } else if (paymentMethod === 'maya') {
+                    visaMessage.style.display = 'block';
+                }
+            }
+            var paymentRadios = document.querySelectorAll('input[name="payment"]');
+            paymentRadios.forEach(function(radio) {
+                radio.addEventListener('change', showPaymentMessage);
+            });
+        </script>
+</body>
+</html>

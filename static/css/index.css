@@ -1,0 +1,118 @@
+body {
+  background-image: url("../images/ricebg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  padding-right: 300px;   
+  height: 100vh; 
+}
+ 
+ body::before {
+  content: "";
+  position: fixed; 
+  background-color: white;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  opacity: 0.3;
+}
+
+ 
+body::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  width: 50%;
+  height: 80%;
+  background-image: url("../images/logo1.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  opacity: 100%;
+  z-index: 2;
+}
+ 
+ 
+form {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  height: 100%;
+  width: 43%;
+  padding: 50px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 100%;
+}
+ 
+ 
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  align-items: center;
+  margin-top: 25%;
+}
+ 
+input[type="password"] ,
+input[type="text"]{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 8px;
+  margin-left: 50px;
+  text-align: center; 
+  width: 230px;
+  position: relative;
+}
+ 
+label {
+  display: inline-block;
+  width: 30px;
+  text-align:center;
+  margin-left: 100px;
+  margin-top: 8px; 
+  margin-bottom: 3px;
+  font-size: 18px; 
+  position: relative;
+}
+ 
+input[name="submit_button"] {
+  background-color: #228B22;
+  color: white; 
+  border: none; 
+  border-radius: 4px;
+  height:35px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer; 
+  float: left;
+  margin-left: 100px;
+  position: relative;
+}
+ 
+input[name="submit_login"] {
+  background-color: grey;
+  color: white; 
+  border: none; 
+  border-radius: 4px;
+  height:35px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer; 
+  float: right;
+  margin-right: 100px;
+  position:relative;
+} 
+  
+input[name="submit_button"]:hover {
+  background-color: #094e0d;
+}
+ 
+input[name="submit_login"]:hover {
+  background-color: #525e52;
+}
